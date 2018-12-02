@@ -21,14 +21,21 @@
         text-shadow: 0 1px 1px #fff
         &:hover
           opacity: 1
+      .activeSlide
+        opacity: 1
   .slideImgText
     display: flex
     justify-content: center
     box-shadow: 0 0 10px rgba(0,0,0,0.5)
     .slideImg
       width: 480px
-      img
-        width: 100%
+      .imgUp
+        transition: 0.5s
+        width: 480px
+      .imgDown
+        width: 480px
+      .imgUp
+        position: absolute
     .slideText
       width: 268px
       background: #ffa78d

@@ -1,16 +1,17 @@
 <div class="content">
   <div class="slideMenu">
     <ul>
-      <li>Повязки</li>
-      <li>Заколка</li>
-      <li>Обруч</li>
-      <li>Корона</li>
-      <li>Бiжутерія</li>
+      <li *ngFor="let s of slides; let i = index"
+          [ngClass]="{activeSlide: s.status}"
+          (click)="checkThisSlide(i)"
+      >{{s.name}}
+      </li>
     </ul>
   </div>
   <div class="slideImgText">
     <div class="slideImg">
-      <img src="../assets/obruch.png" alt="Пов'язки">
+      <img src={{addrSlideUp}} [ngStyle]="{'opacity': opacitySlide}" class="imgUp">
+      <img src={{addrSlideDown}} class="imgDown">
     </div>
     <div class="slideText">
       Text
